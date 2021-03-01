@@ -20,40 +20,40 @@ Below you can find the links to the layouts you need to follow. You can inspect 
 We expect you to implement the following functionalities in the app:
 
 1. **List horizontally currently playing movies**
-* Client API details 
-	* GET https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=undefined&api_key=55957fcf3ba81b137f8fc01ac5a31fb5
-	* Only display poster images in the horizontal scrolling list view.
-	* No pagination necessary.
+	* Client API details 
+		* GET https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=undefined&api_key=55957fcf3ba81b137f8fc01ac5a31fb5
+		* Only display poster images in the horizontal scrolling list view.
+		* No pagination necessary.
 	
 2. **Display the most popular movies in the vertical list view, with multiple pages**
-* Client API details  
-	* GET https://api.themoviedb.org/3/movie/popular?api_key=55957fcf3ba81b137f8fc01ac5a31fb5&language=en-US&page=1
-	* Use the parameter page to change the list's page.
-* Implement the paging mechanism to load a list of movies as the user scrolls down the list.
-* Cache movie images, in order to make smooth scrolling.
-	* Implement the custom RatingView.
-	* Animation is not necessary.
-	* Use Yellow tint for movie ratings less than 50% and Green for 50% and above.
-* Each list item will contain the following:
-	* Poster image
-	* Title
-	* Rating
-	* Duration
-	* Release date
+	* Client API details  
+		* GET https://api.themoviedb.org/3/movie/popular?api_key=55957fcf3ba81b137f8fc01ac5a31fb5&language=en-US&page=1
+		* Use the parameter page to change the list's page.
+	* Implement the paging mechanism to load a list of movies as the user scrolls down the list.
+	* Cache movie images, in order to make smooth scrolling.
+		* Implement the custom RatingView.
+		* Animation is not necessary.
+		* Use Yellow tint for movie ratings less than 50% and Green for 50% and above.
+	* Each list item will contain the following:
+		* Poster image
+		* Title
+		* Rating
+		* Duration
+		* Release date
 	
 3. **When a user clicks on any movie list item, it will navigate to a detailed screen, with more information about the movie**
-* Client API details 
-	* GET https://api.themoviedb.org/3/movie/{MOVIE_ID}?api_key=55957fcf3ba81b137f8fc01ac5a31fb5&language=en-US
-	* Where MOVIE_ID should be replaced with the id of the movie.
-	* Example: https://api.themoviedb.org/3/movie/464052?api_key=55957fcf3ba81b137f8fc01ac5a31fb5&language=en-US
-* Detail screen should contain the following information:
-	* Poster image 
-	* Use the API as per described: https://developers.themoviedb.org/3/getting-started/images
-	* Duration
-	* Title
-	* Overview
-	* Release date
-	* List of genres
+	* Client API details 
+		* GET https://api.themoviedb.org/3/movie/{MOVIE_ID}?api_key=55957fcf3ba81b137f8fc01ac5a31fb5&language=en-US
+		* Where MOVIE_ID should be replaced with the id of the movie.
+		* Example: https://api.themoviedb.org/3/movie/464052?api_key=55957fcf3ba81b137f8fc01ac5a31fb5&language=en-US
+	* Detail screen should contain the following information:
+		* Poster image 
+		* Use the API as per described: https://developers.themoviedb.org/3/getting-started/images
+		* Duration
+		* Title
+		* Overview
+		* Release date
+		* List of genres
 	
 ### Additional Requirements And Restrictions
 We expect you to follow this additional requirements and restrictions, as it will be part of how we evaluate your assignment:
