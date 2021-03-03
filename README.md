@@ -72,9 +72,9 @@ We expect you to follow this additional requirements and restrictions, as it wil
 	* iOS - 14.0 +
 
 ## Delivering the code
-* Fork this repo and select the access level as PRIVATE. This is very important. **[Check how to do it here](https://confluence.atlassian.com/bitbucket/forking-a-repository-221449527.html)**
+* Fork this repo and select the access level as PRIVATE. This is very important. **[Check how to do it here](https://docs.gitlab.com/ee////user/project/working_with_projects.html#fork-a-project)**
 * Do NOT open a PR to this repository.
-* Go to settings and add the user **m-cs-recruitment@backbase.com** with the read access **[Check how to do it here](https://confluence.atlassian.com/bitbucket/grant-repository-access-to-users-and-groups-221449716.html)**
+* Add the user **m-cs-recruitment@backbase.com** as `Reporter` member **[Check how to do it here](https://docs.gitlab.com/ee/user/project/members/#add-a-user)**
 * Once you are done with the development, send an e-mail to **m-cs-recruitment@backbase.com** AND CC the recruiter who is in touch with you with your info and repo. This helps us to keep track of your progress and move with the process faster.
 
 Please remember to work with small commits, it help us to see how you improve your code :)
