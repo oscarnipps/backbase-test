@@ -1,4 +1,4 @@
-# Android Assignment CS
+# Mobile Assignment CS
 This is a placeholder README file with the instructions for the assingment. We expect you to build your own README file.
 
 ## Instructions
