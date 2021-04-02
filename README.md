@@ -71,7 +71,7 @@ We expect you to follow this additional requirements and restrictions, as it wil
 3. This is not an ordinary assignment. If you notice any strange behavior, you are free to make decisions regarding the implementation or to take things out of scope, as long as your decision can be justified.
 4. Provide a README.md explaining your approach, which includes the image caching but also the rating view implementation and any other important decision or assumptions you made during development. Also, list all the 3rd party libraries used and the reason why.
 5. You should follow the layouts provided to develop the functionalities.
-6. The code of the assignment has to be delivered along with the git repository (.git folder). We want to see your progress. We require a cloud-hosted repository on Bitbucket, which *MUST* be PRIVATE.
+6. The code of the assignment has to be delivered along with the git repository (.git folder). We want to see your progress. We require a cloud-hosted repository on Gitlab, which *MUST* be PRIVATE.
 7. **Do not open PRs to the main repository.**
 8. You are free to handle extra requirements, and this will be part of how we evaluate your work.
 7. The application should be developed in portrait mode only.
