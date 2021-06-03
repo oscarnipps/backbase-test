@@ -78,3 +78,4 @@ We expect you to follow this additional requirements and restrictions, as it wil
 9. Minimum Supported versions:
 	* Android - 5.0 +
 	* iOS - 14.0 +
+10. Do not use any hybrid solutions, such as Reactive Native or Flutter.
