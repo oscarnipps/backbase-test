@@ -1,6 +1,9 @@
 # Mobile Assignment CS
 This is a placeholder README file with the instructions for the assingment. We expect you to build your own README file.
 
+## Kick off
+In order for us to kick off your assingment, please **[watch this 9 minutes video](https://youtu.be/qUkYkm9bWak)** where we will go through the assingment instructions and answer some of the questions you might have.
+
 ## Delivering the code
 * Fork this repo and select the access level as PRIVATE. This is very important. **[Check how to do it here](https://docs.gitlab.com/ee////user/project/working_with_projects.html#fork-a-project)**
 * Do NOT open a PR to this repository.
