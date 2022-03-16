@@ -24,38 +24,39 @@ You should build an application using the TheMovieDB API. We have provided an in
 ### UI/UX
 Below you can find the links to the layouts you need to follow. You can inspect each view to get the dimensions:
 
-* [Android](https://app.abstract.com/share/0c431216-05c1-45d7-8304-f9e6566276bf)
-* [iOS](https://app.abstract.com/share/8cb87be4-4250-45e0-9066-abcdf4d5dd79)
+* [Android](https://share.goabstract.com/bd042e15-d8d9-4a19-8be0-c8e7d42a646c)
+* [iOS](https://share.goabstract.com/cc138f78-f400-415e-96e8-ae705b715897)
 
 ### Functionalities
 We expect you to implement the following functionalities in the app:
 
-1. **List horizontally currently playing movies**
+1. **List of playing now movies**
 	* Client API details 
-		* GET https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=undefined&api_key=55957fcf3ba81b137f8fc01ac5a31fb5
-		* Only display poster images in the horizontal scrolling list view.
-		* No pagination necessary.
-	
-2. **Display the most popular movies in the vertical list view, with multiple pages**
-	* Client API details  
-		* GET https://api.themoviedb.org/3/movie/popular?api_key=55957fcf3ba81b137f8fc01ac5a31fb5&language=en-US&page=1
-		* Use the parameter page to change the list's page.
-	* Implement the paging mechanism to load a list of movies as the user scrolls down the list.
-	* Cache movie images, in order to make smooth scrolling.
-	* Implement the custom RatingView.
-		* Animation is not necessary.
-		* Use Yellow tint for movie ratings less than 50% and Green for 50% and above.
-	* Each list item will contain the following:
+		* GET `https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=undefined&api_key=55957fcf3ba81b137f8fc01ac5a31fb5`
+	* This list should be accessible in as a tab bar/bottom navigation item, as per UI/UX.
+	* Each movie item should contain the following:
 		* Poster image
 		* Title
 		* Rating
 		* Duration
 		* Release date
+	* Implement the custom RatingView.
+		* Use Red tint for movie ratings less than 50% and Green for 50% and above.
+	* No pagination necessary.
 	
-3. **When a user clicks on any movie list item, it will navigate to a detailed screen, with more information about the movie**
+2. **List of most popular movies, with multiple pages**
+	* Client API details  
+		* GET `https://api.themoviedb.org/3/movie/popular?api_key=55957fcf3ba81b137f8fc01ac5a31fb5&language=en-US&page=1`
+		* Use the parameter `page` to change the list's page.
+	* This list should be accessible in as a tab bar/bottom navigation item, as per UI/UX.
+	* Display each movie item with the same details as the previous list.
+	* Implement the paging mechanism to load a list of movies as the user scrolls down the list.
+	* Cache movie images, in order to make smooth scrolling.
+	
+3. **When a user clicks on any movie item, it will navigate to a detailed screen, with more information about the movie**
 	* Client API details 
-		* GET https://api.themoviedb.org/3/movie/{MOVIE_ID}?api_key=55957fcf3ba81b137f8fc01ac5a31fb5&language=en-US
-		* Where MOVIE_ID should be replaced with the id of the movie.
+		* GET `https://api.themoviedb.org/3/movie/{MOVIE_ID}?api_key=55957fcf3ba81b137f8fc01ac5a31fb5&language=en-US`
+		* Where `MOVIE_ID` should be replaced with the id of the movie.
 		* Example: https://api.themoviedb.org/3/movie/464052?api_key=55957fcf3ba81b137f8fc01ac5a31fb5&language=en-US
 	* Detail screen should contain the following information:
 		* Poster image 
@@ -82,3 +83,4 @@ We expect you to follow this additional requirements and restrictions, as it wil
 	* Android - 5.0 +
 	* iOS - 14.0 +
 10. Do not use any hybrid solutions, such as Reactive Native or Flutter.
+11. As a recommendation, we would like to see you using SwiftUI+Combine or Jetpack Compose.
