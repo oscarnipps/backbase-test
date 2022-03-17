@@ -59,8 +59,7 @@ We expect you to implement the following functionalities in the app:
 		* Where `MOVIE_ID` should be replaced with the id of the movie.
 		* Example: https://api.themoviedb.org/3/movie/464052?api_key=55957fcf3ba81b137f8fc01ac5a31fb5&language=en-US
 	* Detail screen should contain the following information:
-		* Poster image 
-		* Use the API as per described: https://developers.themoviedb.org/3/getting-started/images
+		* Poster image: use the API as per described: https://developers.themoviedb.org/3/getting-started/images
 		* Duration
 		* Title
 		* Overview
