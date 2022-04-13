@@ -1,9 +1,6 @@
 # Mobile Assignment CS
 This is a placeholder README file with the instructions for the assingment. We expect you to build your own README file.
 
-## Disclaimer
-If you started the assingment before April 1st, please use **master** branch. If you are starting after April 1st, then use **upgrade-2022** branch.
-
 ## Kick off
 In order for us to kick off your assingment, please **[watch this 9 minutes video](https://youtu.be/qUkYkm9bWak)** where we will go through the assingment instructions and answer some of the questions you might have.
 
