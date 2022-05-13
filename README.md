@@ -37,20 +37,17 @@ We expect you to implement the following functionalities in the app:
 	* Each movie item should contain the following:
 		* Poster image
 		* Title
-		* Rating
+		* Rating (the couloured dot view): use red tint for movie ratings less than 50% and green for 50% and above.
 		* Duration
-		* Release date
-	* Implement the custom RatingView.
-		* Use Red tint for movie ratings less than 50% and Green for 50% and above.
-	* No pagination necessary.
 	
-2. **List of most popular movies, with multiple pages**
+2. **List of most popular movies**
 	* Client API details  
-		* GET `https://api.themoviedb.org/3/movie/popular?api_key=55957fcf3ba81b137f8fc01ac5a31fb5&language=en-US&page=1`
-		* Use the parameter `page` to change the list's page.
+		* GET `https://api.themoviedb.org/3/movie/popular?api_key=55957fcf3ba81b137f8fc01ac5a31fb5&language=en-US`
 	* This list should be accessible in as a tab bar/bottom navigation item, as per UI/UX.
-	* Display each movie item with the same details as the previous list.
-	* Implement the paging mechanism to load a list of movies as the user scrolls down the list.
+	* Each movie item should contain the following:
+		* Poster image
+		* Title
+		* Rating
 	* Cache movie images, in order to make smooth scrolling.
 	
 3. **When a user clicks on any movie item, it will navigate to a detailed screen, with more information about the movie**
