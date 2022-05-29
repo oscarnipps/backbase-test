@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/playingNowFragment"
+        android:icon="@drawable/ic_playing_now"
+        android:title="@string/playing_now" />
+
+    <item
+        android:id="@+id/mostPopularFragment"
+        android:icon="@drawable/ic_most_popular"
+        android:title="@string/most_popular" />
+
+</menu>

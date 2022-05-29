@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/movie_nav_graph.xml"
+    app:startDestination="@id/playingNowFragment">
+
+    <fragment
+        tools:layout="@layout/fragment_playing_now"
+        android:id="@+id/playingNowFragment"
+        android:name="com.backbase.assignment.ui.playingnow.PlayingNowFragment"
+        android:label="PlayingNowFragment" >
+        <action
+            android:id="@+id/action_playingNowFragment_to_movieDetailFragment"
+            app:destination="@id/movieDetailFragment" />
+    </fragment>
+
+    <fragment
+        tools:layout="@layout/fragment_most_popular"
+        android:id="@+id/mostPopularFragment"
+        android:name="com.backbase.assignment.ui.mostpopular.MostPopularFragment"
+        android:label="MostPopularFragment" >
+        <action
+            android:id="@+id/action_mostPopularFragment_to_movieDetailFragment"
+            app:destination="@id/movieDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/movieDetailFragment"
+        android:name="com.backbase.assignment.ui.moviedetails.MovieDetailFragment"
+        android:label="MovieDetailFragment" >
+        <argument
+            android:name="movieId"
+            app:argType="string"
+            android:defaultValue='""' />
+    </fragment>
+</navigation>
