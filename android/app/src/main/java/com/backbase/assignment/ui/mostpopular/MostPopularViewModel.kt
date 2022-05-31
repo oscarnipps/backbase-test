@@ -5,6 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.backbase.assignment.common.Resource
 import com.backbase.assignment.data.repo.mostpopular.MostPopularRepo
+import com.backbase.assignment.util.ErrorMessageUtil
 import dagger.hilt.android.lifecycle.HiltViewModel
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
@@ -38,7 +39,7 @@ class MostPopularViewModel @Inject constructor(
     private fun handleMostPopularMoviesError(error: Throwable) {
         Timber.e(error.localizedMessage)
 
-        popularMovies.value = Resource.error("error loading popular movies")
+        popularMovies.value = Resource.error(ErrorMessageUtil.getErrorMessageFromResponse(error))
 
     }
 
@@ -48,6 +49,10 @@ class MostPopularViewModel @Inject constructor(
 
     fun mostPopularMovies(): LiveData<Resource<List<MostPopularMovie>>> {
         return  popularMovies
+    }
+
+    fun getMovieRating(voteAverage: Double): Int {
+        return ((voteAverage / 10) * 100).toInt()
     }
 
     override fun onCleared() {
