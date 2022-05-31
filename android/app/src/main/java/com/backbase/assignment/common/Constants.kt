@@ -2,9 +2,17 @@ package com.backbase.assignment.common
 
 
 object Constants{
-    const val API_BASE_URL = "https://api.themoviedb.org/3"
+    const val API_BASE_URL = "https://api.themoviedb.org/3/"
 
-    const val ENDPOINT_MOST_POPULAR_MOVIES = "/movie/popular"
+    const val IMAGE_BASE_URL = "https://image.tmdb.org/t/p/"
+
+    const val SMALL_IMAGE_FILE_SIZE = "w92"
+
+    const val MEDIUM_IMAGE_FILE_SIZE = "w185"
+
+    const val LARGE_IMAGE_FILE_SIZE = "w42"
+
+    const val ENDPOINT_MOST_POPULAR_MOVIES = "movie/popular"
 
     //todo: put key in gradle properties file
     const val API_KEY = "55957fcf3ba81b137f8fc01ac5a31fb5"

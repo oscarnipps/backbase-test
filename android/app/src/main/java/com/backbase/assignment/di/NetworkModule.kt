@@ -53,7 +53,6 @@ class NetworkModule {
     @Provides
     fun provideGsonConverterFactory(): GsonConverterFactory {
         val gson = GsonBuilder()
-            .excludeFieldsWithoutExposeAnnotation()
             .create()
 
         return GsonConverterFactory.create(gson)

@@ -5,5 +5,5 @@ data class MostPopularMovie(
     val movieTitle: String,
     val movieOverView: String,
     val movieImageUrl: String,
-    val movieRating: Int
+    val movieRating: Double
 )
