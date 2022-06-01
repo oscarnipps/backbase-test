@@ -159,6 +159,7 @@ class MostPopularFragment : Fragment(), MostPopularMoviesAdapter.MovieItemInterf
     }
 
     override fun onPopularMovieItemClicked(movie: MostPopularMovie) {
+        Timber.d("movie id : ${movie.movieId}")
         navigateToMovieDetails(movie)
     }
 

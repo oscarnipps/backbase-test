@@ -14,6 +14,8 @@ object Constants{
 
     const val ENDPOINT_MOST_POPULAR_MOVIES = "movie/popular"
 
+    const val ENDPOINT_MOVIE_DETAILS = "movie/"
+
     //todo: put key in gradle properties file
     const val API_KEY = "55957fcf3ba81b137f8fc01ac5a31fb5"
 
