@@ -10,7 +10,7 @@ object Constants{
 
     const val MEDIUM_IMAGE_FILE_SIZE = "w185"
 
-    const val LARGE_IMAGE_FILE_SIZE = "w42"
+    const val LARGE_IMAGE_FILE_SIZE = "w780"
 
     const val ENDPOINT_MOST_POPULAR_MOVIES = "movie/popular"
 

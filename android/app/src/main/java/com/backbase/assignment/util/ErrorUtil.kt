@@ -6,9 +6,9 @@ import retrofit2.HttpException
 import retrofit2.Response
 import timber.log.Timber
 
-object ErrorMessageUtil {
+object ErrorUtil {
 
-    fun getErrorMessageFromResponse(error: Throwable): String {
+    fun getErrorMessage(error: Throwable): String {
         (error as? HttpException)?.let {
             Timber.d("error code : ${error.code()}")
 

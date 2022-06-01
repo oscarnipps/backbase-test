@@ -2,4 +2,8 @@
     <string name="app_name">CS Android Assignment</string>
     <string name="playing_now">Playing now</string>
     <string name="most_popular">Most popular</string>
+    <string name="see_more">See more</string>
+    <string name="rating">%d%%</string>
+    <string name="error_message">Error loading movies , please try again...</string>
+    <string name="movie_overview_sample">Freddie Mercury -- the lead singer of Queen -- defies stereotypes and convention to become one of history\'s most beloved entertainers. The ba…</string>
 </resources>

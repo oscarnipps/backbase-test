@@ -5,7 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.backbase.assignment.common.Resource
 import com.backbase.assignment.data.repo.mostpopular.MostPopularRepo
-import com.backbase.assignment.util.ErrorMessageUtil
+import com.backbase.assignment.util.ErrorUtil
 import dagger.hilt.android.lifecycle.HiltViewModel
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
@@ -20,7 +20,7 @@ class MostPopularViewModel @Inject constructor(
 
     private val compositeDisposable = CompositeDisposable()
     private val popularMovies: MutableLiveData<Resource<List<MostPopularMovie>>> = MutableLiveData()
-
+    private val currentMovie: MutableLiveData<MostPopularMovie> = MutableLiveData()
 
     fun getMostPopularMovies() {
         popularMovies.value = Resource.loading()
@@ -39,8 +39,7 @@ class MostPopularViewModel @Inject constructor(
     private fun handleMostPopularMoviesError(error: Throwable) {
         Timber.e(error.localizedMessage)
 
-        popularMovies.value = Resource.error(ErrorMessageUtil.getErrorMessageFromResponse(error))
-
+        popularMovies.value = Resource.error(ErrorUtil.getErrorMessage(error))
     }
 
     private fun handleMostPopularMovies(movieItems: List<MostPopularMovie>) {
@@ -48,7 +47,15 @@ class MostPopularViewModel @Inject constructor(
     }
 
     fun mostPopularMovies(): LiveData<Resource<List<MostPopularMovie>>> {
-        return  popularMovies
+        return popularMovies
+    }
+
+    fun setCurrentPopularMovie(movie: MostPopularMovie) {
+        currentMovie.value = movie
+    }
+
+    fun getCurrentPopularMovie(): LiveData<MostPopularMovie> {
+        return currentMovie
     }
 
     fun getMovieRating(voteAverage: Double): Int {

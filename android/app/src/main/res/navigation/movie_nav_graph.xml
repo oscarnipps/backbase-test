@@ -31,7 +31,6 @@
         android:label="MovieDetailFragment" >
         <argument
             android:name="movieId"
-            app:argType="string"
-            android:defaultValue='""' />
+            app:argType="string" />
     </fragment>
 </navigation>

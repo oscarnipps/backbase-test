@@ -30,6 +30,6 @@ class MostPopularMovieMapper @Inject constructor() {
     }
 
     private fun getImageUrl(movieItem: MostPopularMoviesResponse.MovieData): String {
-        return "${Constants.IMAGE_BASE_URL}${Constants.LARGE_IMAGE_FILE_SIZE}/${movieItem.posterPath} "
+        return "${Constants.IMAGE_BASE_URL}${Constants.LARGE_IMAGE_FILE_SIZE}${movieItem.posterPath}"
     }
 }

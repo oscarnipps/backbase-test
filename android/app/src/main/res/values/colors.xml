@@ -4,4 +4,5 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="splash">#3d3d4e</color>
+    <color name="rating_text_color">#ffbbbbbb</color>
 </resources>

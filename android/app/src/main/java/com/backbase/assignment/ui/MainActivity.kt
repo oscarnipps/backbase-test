@@ -1,6 +1,7 @@
 package com.backbase.assignment.ui
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
@@ -27,6 +28,33 @@ class MainActivity : AppCompatActivity() {
 
         bottomNavigationView.setupWithNavController(navController)
 
+        navController.addOnDestinationChangedListener { controller, destination, arguments ->
+
+            if (isTopLevelDestination(destination.id)) {
+                bottomNavigationView.visibility = View.VISIBLE
+                return@addOnDestinationChangedListener
+            }
+
+            bottomNavigationView.visibility = View.GONE
+        }
+
+    }
+
+    private fun isTopLevelDestination(destination : Int): Boolean {
+        val topLevelDestinations = getTopLevelDestinations()
+
+        if (topLevelDestinations.contains(destination)) {
+            return true
+        }
+
+        return false
+    }
+
+    private fun getTopLevelDestinations () : Set<Int>{
+        return setOf(
+            R.id.playingNowFragment,
+            R.id.mostPopularFragment
+        )
     }
 
 }
