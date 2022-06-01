@@ -15,6 +15,7 @@ import androidx.viewpager2.widget.ViewPager2.ORIENTATION_HORIZONTAL
 import com.backbase.assignment.R
 import com.backbase.assignment.common.Resource
 import com.backbase.assignment.databinding.FragmentMostPopularBinding
+import com.backbase.assignment.util.EspressoIdlingResource
 import dagger.hilt.android.AndroidEntryPoint
 import timber.log.Timber
 
@@ -35,6 +36,8 @@ class MostPopularFragment : Fragment(), MostPopularMoviesAdapter.MovieItemInterf
 
         binding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_most_popular, container, false)
+
+        EspressoIdlingResource.increment()
 
         viewModel.getMostPopularMovies()
 
@@ -138,9 +141,12 @@ class MostPopularFragment : Fragment(), MostPopularMoviesAdapter.MovieItemInterf
 
                     popularMovies = movieList
 
+                    EspressoIdlingResource.decrement()
                 }
 
                 Resource.Status.ERROR -> {
+                    EspressoIdlingResource.decrement()
+
                     Timber.e(movies.message)
 
                     binding.loadingView.visibility = View.GONE
