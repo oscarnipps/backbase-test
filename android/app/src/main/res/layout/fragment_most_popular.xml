@@ -78,7 +78,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/popular_movies_view_pager"
-            tools:text="Spider Man - No Way Home" />
+            tools:text="@string/movie_title_sample" />
 
         <TextView
             android:id="@+id/rating"

@@ -1,10 +1,12 @@
 package com.backbase.assignment.common
 
 import android.graphics.drawable.Drawable
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.databinding.BindingAdapter
 import com.backbase.assignment.R
+import com.bumptech.glide.Glide
 
 @BindingAdapter("ratingDrawable")
 fun TextView.setRatingDrawable(rating: Int) {
@@ -27,4 +29,15 @@ fun setIntrinsicBounds(drawable: Drawable?) {
         drawable.intrinsicWidth,
         drawable.intrinsicHeight
     )
+}
+
+@BindingAdapter("setMovieImage")
+fun ImageView.setMovieImage(url: String?) {
+    if (url == null) {
+        return
+    }
+
+   Glide.with(this.context)
+       .load(url)
+       .into(this)
 }

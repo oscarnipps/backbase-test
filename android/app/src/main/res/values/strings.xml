@@ -6,4 +6,12 @@
     <string name="rating">%d%%</string>
     <string name="error_message">Error loading movies , please try again...</string>
     <string name="movie_overview_sample">Freddie Mercury -- the lead singer of Queen -- defies stereotypes and convention to become one of history\'s most beloved entertainers. The ba…</string>
+    <string name="movie_title_sample">Spider Man - No Way Home</string>
+    <string name="movie_sample_duration">2h03</string>
+    <string name="duration">Lasts</string>
+    <string name="movie_sample_release_date">April, 23 2018</string>
+    <string name="released_date_tag">Released on</string>
+    <string name="movie_language_sample">ENGLISH</string>
+    <string name="movie_image">movie image</string>
+    <string name="close_view">close view</string>
 </resources>

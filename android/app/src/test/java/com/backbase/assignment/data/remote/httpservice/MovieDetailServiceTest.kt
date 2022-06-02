@@ -6,11 +6,9 @@ import com.backbase.assignment.MockResponseFileReader
 import com.backbase.assignment.RxJavaSchedulerRule
 import com.backbase.assignment.TestServiceGenerator
 import com.backbase.assignment.common.Resource
-import com.backbase.assignment.data.mappers.MostPopularMovieMapper
 import com.backbase.assignment.data.mappers.MovieDetailMapper
 import com.backbase.assignment.data.repo.moviedetail.MovieDetailRepo
 import com.backbase.assignment.data.repo.moviedetail.MovieDetailRepoImpl
-import com.backbase.assignment.ui.mostpopular.MostPopularViewModel
 import com.backbase.assignment.ui.moviedetails.MovieDetailViewModel
 import com.google.common.truth.Truth
 import okhttp3.mockwebserver.MockResponse

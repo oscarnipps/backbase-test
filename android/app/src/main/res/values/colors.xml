@@ -7,4 +7,5 @@
     <color name="rating_text_color">#ffbbbbbb</color>
     <color name="item_color_active">#ff6effc8</color>
     <color name="item_color_inactive">#ffbbbbbb</color>
+    <color name="genre_text_color">#ff0a0b25</color>
 </resources>
