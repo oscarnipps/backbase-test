@@ -1,6 +1,7 @@
 package com.backbase.assignment.di
 
 import com.backbase.assignment.common.Constants
+import com.backbase.assignment.data.remote.interceptors.MovieCacheInterceptor
 import com.google.gson.GsonBuilder
 import dagger.Module
 import dagger.Provides
@@ -36,6 +37,8 @@ class NetworkModule {
     @Singleton
     fun providesOkHttp(): OkHttpClient {
         val builder = OkHttpClient.Builder()
+
+        builder.addInterceptor(MovieCacheInterceptor())
 
         val loggingInterceptor = HttpLoggingInterceptor().apply {
             level = HttpLoggingInterceptor.Level.BODY

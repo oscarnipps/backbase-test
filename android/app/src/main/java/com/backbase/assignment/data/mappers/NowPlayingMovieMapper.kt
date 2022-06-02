@@ -11,16 +11,6 @@ class NowPlayingMovieMapper @Inject constructor() {
 
     fun mapToNowPlayingMovie(response: NowPlayingMovieResponse): NowPlayingMovies {
 
-        /* return MovieDetail(
-             response.originalTitle,
-             response.overview,
-             MovieUtil.getMovieImageUrl(response.posterPath),
-             MovieUtil.getFormattedMovieRuntimeString(response.runtime),
-             MovieUtil.getFormattedMovieReleaseDateString(response.releaseDate),
-             response.spokenLanguages[0].name,
-             response.genres.map { it.name }
-         )*/
-
         return with(response) {
             NowPlayingMovies(
                 total = response.totalPages,

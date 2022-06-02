@@ -33,7 +33,7 @@ class NowPlayingPagingSource @Inject constructor (
             .subscribeOn(Schedulers.io())
             .map { mapper.mapToNowPlayingMovie(it) }
             .map{toLoadResult(it,position)}
-            .onErrorReturn { PagingSource.LoadResult.Error(it) }
+            .onErrorReturn { LoadResult.Error(it) }
     }
 
     private fun toLoadResult(data: NowPlayingMovies, position : Int) : LoadResult<Int, NowPlayingMovie> {
