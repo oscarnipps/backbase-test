@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.backbase.assignment.util.MovieUtil" />
+
+        <variable
+            name="movie"
+            type="com.backbase.assignment.ui.playingnow.NowPlayingMovie" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        >
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/image_container"
+            android:layout_width="147dp"
+            android:layout_height="219dp"
+            app:cardCornerRadius="13dp"
+            app:cardElevation="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/movie_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/movie_image"
+                android:scaleType="centerCrop"
+                setMovieImage="@{movie.movieImageUrl}"
+                tools:src="@drawable/movie_sample" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:drawablePadding="6dp"
+            android:textColor="@color/rating_text_color"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:text="@{MovieUtil.getMovieRatingPercent(movie.movieRating)}"
+            ratingDrawable="@{MovieUtil.getMovieRatingValue(movie.movieRating)}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/movie_title"
+            app:layout_constraintStart_toStartOf="@+id/movie_title"
+            app:layout_constraintTop_toBottomOf="@+id/movie_title"
+            tools:drawableStartCompat="@drawable/bg_high_rating"
+            tools:text="75%" />
+
+        <TextView
+            android:id="@+id/movie_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:textSize="14sp"
+            android:text="@{movie.movieTitle}"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/image_container"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="@+id/image_container"
+            app:layout_constraintTop_toBottomOf="@+id/image_container"
+            tools:text="@string/movie_title_sample" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

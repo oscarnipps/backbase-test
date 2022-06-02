@@ -8,7 +8,7 @@
     <fragment
         tools:layout="@layout/fragment_playing_now"
         android:id="@+id/playingNowFragment"
-        android:name="com.backbase.assignment.ui.playingnow.PlayingNowFragment"
+        android:name="com.backbase.assignment.ui.playingnow.NowPlayingFragment"
         android:label="PlayingNowFragment" >
         <action
             android:id="@+id/action_playingNowFragment_to_movieDetailFragment"
