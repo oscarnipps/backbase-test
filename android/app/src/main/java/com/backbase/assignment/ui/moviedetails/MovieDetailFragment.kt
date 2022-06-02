@@ -116,8 +116,6 @@ class MovieDetailFragment : Fragment() {
         )
 
         childTextView.apply {
-            //childTextView.layoutParams = params
-
             text = genre
 
             setPadding(10)
