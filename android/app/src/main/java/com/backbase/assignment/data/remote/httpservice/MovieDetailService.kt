@@ -12,7 +12,7 @@ interface MovieDetailService {
 
     @GET("${Constants.ENDPOINT_MOVIE_DETAILS}/{movieId}")
     fun getMovieDetails(
-        @QueryMap queryMap: MutableMap<String, String>,
-        @Path("movieId") movieId: String
+        @Path("movieId") movieId: String,
+        @QueryMap queryMap: MutableMap<String, String>
     ): Single<MovieDetailsResponse>
 }

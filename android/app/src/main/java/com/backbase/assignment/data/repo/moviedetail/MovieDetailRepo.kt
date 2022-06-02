@@ -6,5 +6,5 @@ import io.reactivex.Single
 
 interface MovieDetailRepo {
 
-    fun getMostPopularMovies(movieId : String): Single<MovieDetail>
+    fun getMovieDetails(movieId : String): Single<MovieDetail>
 }

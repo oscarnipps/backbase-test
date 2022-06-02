@@ -5,7 +5,7 @@
 
     <data>
 
-        <import type="com.backbase.assignment.util.RatingUtil" />
+        <import type="com.backbase.assignment.util.MovieUtil" />
 
         <variable
             name="viewModel"
@@ -82,13 +82,13 @@
 
         <TextView
             android:id="@+id/rating"
-            ratingDrawable="@{RatingUtil.getMovieRatingValue(viewModel.currentPopularMovie.movieRating)}"
+            ratingDrawable="@{MovieUtil.getMovieRatingValue(viewModel.currentPopularMovie.movieRating)}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="8dp"
             android:drawablePadding="6dp"
-            android:text="@{RatingUtil.getMovieRatingPercent(viewModel.currentPopularMovie.movieRating)}"
+            android:text="@{MovieUtil.getMovieRatingPercent(viewModel.currentPopularMovie.movieRating)}"
             android:textColor="@color/rating_text_color"
             android:textSize="14sp"
             android:textStyle="bold"

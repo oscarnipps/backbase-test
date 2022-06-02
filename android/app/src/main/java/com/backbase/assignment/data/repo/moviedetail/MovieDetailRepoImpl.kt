@@ -12,12 +12,12 @@ class MovieDetailRepoImpl @Inject constructor(
     private val mapper: MovieDetailMapper
 ) : MovieDetailRepo{
 
-    override fun getMostPopularMovies(movieId : String): Single<MovieDetail> {
+    override fun getMovieDetails(movieId : String): Single<MovieDetail> {
         val queryMap = mutableMapOf(
             Pair(Constants.QUERY_API_KEY, Constants.API_KEY),
             Pair(Constants.QUERY_LANGUAGE_KEY, Constants.LANGUAGE),
         )
-        return movieDetailService.getMovieDetails(queryMap,movieId)
+        return movieDetailService.getMovieDetails(movieId,queryMap)
             .map { mapper.mapToMovieDetail(it) }
     }
 }
