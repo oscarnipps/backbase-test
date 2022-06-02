@@ -45,7 +45,7 @@ class MovieDetailFragment : Fragment() {
         binding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_movie_detail, container, false)
 
-        EspressoIdlingResource.decrement()
+        EspressoIdlingResource.increment()
 
         viewModel.getMovieDetails(args.movieId)
 
