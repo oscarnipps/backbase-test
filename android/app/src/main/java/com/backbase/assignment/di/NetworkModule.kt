@@ -38,13 +38,13 @@ class NetworkModule {
     fun providesOkHttp(): OkHttpClient {
         val builder = OkHttpClient.Builder()
 
-        builder.addInterceptor(MovieCacheInterceptor())
-
         val loggingInterceptor = HttpLoggingInterceptor().apply {
             level = HttpLoggingInterceptor.Level.BODY
         }
 
         builder.addInterceptor(loggingInterceptor)
+
+        builder.addNetworkInterceptor(MovieCacheInterceptor())
 
         return builder
             .readTimeout(60, TimeUnit.SECONDS)

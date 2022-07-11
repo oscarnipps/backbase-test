@@ -2,7 +2,6 @@ package com.backbase.assignment.ui.moviedetails
 
 import android.content.res.Resources
 import android.os.Bundle
-import android.text.Layout
 import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.View
@@ -10,9 +9,6 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.core.content.res.ResourcesCompat
-import androidx.core.view.children
-import androidx.core.view.marginBottom
-import androidx.core.view.marginTop
 import androidx.core.view.setPadding
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
@@ -23,9 +19,7 @@ import androidx.navigation.fragment.navArgs
 import com.backbase.assignment.R
 import com.backbase.assignment.common.Resource
 import com.backbase.assignment.databinding.FragmentMovieDetailBinding
-import com.backbase.assignment.ui.mostpopular.MostPopularViewModel
 import com.backbase.assignment.util.EspressoIdlingResource
-import com.google.android.material.internal.ViewUtils.dpToPx
 import dagger.hilt.android.AndroidEntryPoint
 import timber.log.Timber
 
@@ -51,12 +45,14 @@ class MovieDetailFragment : Fragment() {
 
         viewModel.getMovieDetail().observe(viewLifecycleOwner, movieDetailObserver())
 
-        binding.lifecycleOwner = this
+        binding.lifecycleOwner = viewLifecycleOwner
 
         binding.close.setOnClickListener { findNavController().popBackStack() }
 
         return binding.root
     }
+
+
 
     private fun movieDetailObserver(): Observer<Resource<MovieDetail>> {
         return Observer { result ->
@@ -108,14 +104,30 @@ class MovieDetailFragment : Fragment() {
             LinearLayout.LayoutParams.WRAP_CONTENT
         )
 
-        params.setMargins(
+        /*params.setMargins(
             R.dimen.zero_margin,
             R.dimen.genre_margin_right,
             R.dimen.genre_margin_top,
             R.dimen.genre_margin_bottom
+        )*/
+
+        val px = TypedValue.applyDimension(
+            TypedValue.COMPLEX_UNIT_DIP,
+            resources.getDimension(R.dimen.genre_margin_right),
+            resources.displayMetrics
+        ).toInt()
+
+        params.setMargins(
+            0,
+            0,
+            px,
+            0
         )
 
+
         childTextView.apply {
+            layoutParams = params
+
             text = genre
 
             setPadding(10)
@@ -124,7 +136,7 @@ class MovieDetailFragment : Fragment() {
 
             isAllCaps = true
 
-            setTextSize( TypedValue.COMPLEX_UNIT_SP, 14f)
+            setTextSize(TypedValue.COMPLEX_UNIT_SP, 14f)
 
             background = ResourcesCompat.getDrawable(resources, R.drawable.bg_genre, null)
         }
